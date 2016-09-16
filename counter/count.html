@@ -1,0 +1,21 @@
+<script>
+var clicks = 0;
+function speedselect(speed) {
+    if(speed == "fast"){
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    }else{
+        clicks -= 1;
+        if(clicks<=0){
+        	clicks=0;
+        }else{}
+        document.getElementById("clicks").innerHTML = clicks;
+    
+    }
+}
+</script>
+
+
+<input type="button" onclick="speedselect('fast');" value="Faster" />
+<input type="button" onclick="speedselect('slow');" value="Slower" />
+ <p>Game Speed: <a id="clicks">0</a></p>
